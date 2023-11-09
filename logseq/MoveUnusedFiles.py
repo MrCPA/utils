@@ -17,7 +17,7 @@ referenced_files = []
 for dirname in [journal_dir, pages_dir]:
     for filename in os.listdir(dirname):
         if filename.endswith('.md'):
-            with open(os.path.join(dirname, filename)) as f:
+            with open(os.path.join(dirname, filename),encoding="utf8") as f:
                 for line in f:
                     for asset in assets_files:
                         if asset in line:
